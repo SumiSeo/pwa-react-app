@@ -6,9 +6,10 @@
   &__container {
     display: flex;
     flex-direction: column;
+    background-color: $container;
     width: 90%;
-    background-color: red;
-    border-radius: 10px;
+    border-radius: 15px;
     height: 90vh;
+    overflow: hidden;
   }
 }

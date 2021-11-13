@@ -1,14 +1,20 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
+const searchIcon = <FontAwesomeIcon icon={faSearch} />;
+console.log(searchIcon);
+console.log(typeof searchIcon);
+interface Placeholder {}
 
 const NavBar: React.FC = () => {
   return (
     <div>
       <nav>
         <div className="nav__link">
-          <h2>Meddler</h2>
+          <h2 className="nav__logo">Meddler</h2>
         </div>
         <div className="nav__link">
-          <input type="text" />
+          <input className="nav__input" type="text" />
         </div>
       </nav>
     </div>

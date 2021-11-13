@@ -1,0 +1,29 @@
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 1rem;
+  background-color: $purple;
+}
+.nav {
+  &__link {
+    margin: 0 2rem;
+  }
+  &__logo {
+    font-size: 2.5rem;
+    font-weight: 200;
+    color: white;
+    transition: all 0.4s;
+    cursor: pointer;
+    color: $green;
+    &:hover {
+      color: $skyblue;
+    }
+  }
+  &__input {
+    outline: none;
+    padding: 10px 20rem;
+    border-radius: 10px;
+    border: none;
+  }
+}

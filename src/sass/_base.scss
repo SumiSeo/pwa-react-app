@@ -8,5 +8,6 @@ html {
 
 body {
   font-family: "Ubuntu", sans-serif;
-  background-image: linear-gradient(to right bottom, $skyblue, $pink);
+  background-image: linear-gradient(to right bottom, $skyblue, $green);
+  box-sizing: inherit;
 }
