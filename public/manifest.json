@@ -1,16 +1,15 @@
 {
-  "short_name":"FM android",
+  "short_name": "FM android",
   "name": "FM android PWA",
-  "icons":[
+  "icons": [
     {
-      "src":"/images/logo.png",
-      "type":"image/png",
-      "sizes":"1024x1024"
+      "src": "/images/logo.png",
+      "type": "image/png",
+      "sizes": "1024x1024"
     }
   ],
-  "start_url":".",
-  "display":"standalone",
-  "theme_color":"#000000",
-  "background_color":"#ffffff"
-  
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
 }

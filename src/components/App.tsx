@@ -3,9 +3,11 @@ import Container from "./Container";
 import NavBar from "./NavBar";
 const App: React.FC = () => {
   return (
-    <div className="main">
-      <NavBar />
-      <Container />
+    <div className="app">
+      <div className="app__container">
+        <NavBar />
+        <Container />
+      </div>
     </div>
   );
 };
