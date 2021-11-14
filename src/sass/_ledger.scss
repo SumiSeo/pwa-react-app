@@ -1,0 +1,53 @@
+.ledger {
+  display: flex;
+  flex-direction: column;
+
+  &__container {
+    padding: 1rem;
+    position: relative;
+    height: 25rem;
+    &:hover {
+    }
+  }
+  &__name {
+    font-size: 2.4rem;
+    color: $purple;
+    margin: 1rem 0;
+    font-weight: 500;
+  }
+  &__box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    label {
+      display: inline-block;
+      font-size: 1.6rem;
+      width: 10rem;
+      color: $skyblue;
+    }
+    input {
+      width: 20rem;
+      outline: none;
+      border: none;
+      border-radius: 10px;
+      padding: 1rem;
+    }
+  }
+  &__title {
+  }
+  &__amount {
+  }
+  &__desc {
+  }
+  &__submit {
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    padding: 1rem 2rem;
+    position: absolute;
+    right: 2rem;
+    margin: 2rem 0;
+    background-color: $purple;
+    cursor: pointer;
+  }
+}

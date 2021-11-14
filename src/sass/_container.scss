@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+
+  &__column:first-child {
+    width: 30%;
+    height: 100%;
+  }
+  &__column:last-child {
+    width: 60%;
+  }
+}

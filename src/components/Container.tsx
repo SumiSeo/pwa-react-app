@@ -1,9 +1,13 @@
 import React from "react";
+import AddLedger from "./AddLedger";
 import Dashboard from "./Dashboard";
 const Container: React.FC = () => {
   return (
-    <div>
-      <div className="container__column">1</div>
+    <div className="container">
+      <div className="container__column">
+        <AddLedger title="Expense" />
+        <AddLedger title="Income" />
+      </div>
       <div className="container__column">
         <Dashboard />
       </div>
