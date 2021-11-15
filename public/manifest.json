@@ -1,15 +1,16 @@
 {
-  "short_name": "FM android",
-  "name": "FM android PWA",
+  "name": "Meddler",
+  "short_name": "Meddler",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#b4fe98",
+  "theme_color": "#77e4d4",
+  "orientation": "portrait-primary",
   "icons": [
     {
       "src": "/images/logo.png",
       "type": "image/png",
       "sizes": "1024x1024"
     }
-  ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  ]
 }
