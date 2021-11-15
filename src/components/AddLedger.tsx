@@ -19,9 +19,9 @@ const AddLedger: React.FC<ChildProps> = ({ title }) => {
           </div>
           <div className="ledger__box ledger__desc">
             <label htmlFor="ledger__desc">Description</label>
-            <textarea name="ledger__desc" id="ledger__desc">
+            {/* <textarea name="ledger__desc" id="ledger__desc">
               text
-            </textarea>
+            </textarea> */}
           </div>
           <input value="Add" className="ledger__submit" type="submit" />
         </form>
