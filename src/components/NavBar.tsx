@@ -4,7 +4,6 @@ import { faSearch, faHandHoldingUsd } from "@fortawesome/free-solid-svg-icons";
 const searchIcon = <FontAwesomeIcon icon={faSearch} />;
 console.log(searchIcon);
 console.log(typeof searchIcon);
-interface Placeholder {}
 
 const NavBar: React.FC = () => {
   return (
