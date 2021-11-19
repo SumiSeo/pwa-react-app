@@ -14,11 +14,13 @@ interface QueryExpenseData {
 
 const Dashboard = () => {
   const { loading, data } = useQuery<QueryExpenseData>(QUERY_EXPENSES);
-  if (!loading) {
-    console.log("data", data);
-    console.log("query", data);
+  if (loading) {
+    return <div></div>;
   }
-
+  //This data could be undfinedm so I have to declare type of data either object or undfined
+  console.log(data);
+  console.log(typeof data);
+  console.log(data && data.queryExpense);
   return (
     <div className="dashboard">
       {loading ? (
@@ -27,15 +29,15 @@ const Dashboard = () => {
         <ul>
           <li className="dashboard__list">
             <span>Expense</span>
-            <p>{data && data.queryExpense}</p>
+            {/* <p>{data}</p> */}
           </li>
           <li className="dashboard__list">
             <span>Income</span>
-            <p>$20</p>
+            {/* <p>{data}</p> */}
           </li>
           <li className="dashboard__list">
             <span>Total</span>
-            <p>-$23</p>
+            {/* <p>{data}</p> */}
           </li>
         </ul>
       )}
