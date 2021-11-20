@@ -29,17 +29,20 @@ const Dashboard = () => {
 
   return (
     <div className="dashboard">
-      <div>
-        <span>Expenses</span>
-        <h1>{dataExpensesAmount}</h1>
+      <div className="dashboard__column">
+        <span className="dashboard__title">Expenses</span>
+        <h1 className="dashboard__number dashboard__expense">
+          {dataExpensesAmount}
+        </h1>
+        <div className="dashboard__box"></div>
       </div>
-      <div>
-        <span>Income</span>
-        <h1></h1>
+      <div className="dashboard__column">
+        <span className="dashboard__title">Income</span>
+        <h1 className="dashboard__number dashboard__income"></h1>
       </div>
-      <div>
-        <span>Total</span>
-        <h1></h1>
+      <div className="dashboard__column">
+        <span className="dashboard__title">Total</span>
+        <h1 className="dashboard__number dashboard__total"></h1>
       </div>
     </div>
   );

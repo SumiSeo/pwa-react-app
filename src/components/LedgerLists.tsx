@@ -1,5 +1,5 @@
 import React from "react";
-const LedgerDetails: React.FC = () => {
+const LedgerLists: React.FC = () => {
   return (
     <div>
       <h1>LedgerDetails</h1>
@@ -7,4 +7,4 @@ const LedgerDetails: React.FC = () => {
   );
 };
 
-export default LedgerDetails;
+export default LedgerLists;

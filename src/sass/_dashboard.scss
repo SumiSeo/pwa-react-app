@@ -1,0 +1,36 @@
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 2rem;
+  gap: 1rem;
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 20rem;
+    padding: 2rem;
+    position: relative;
+    z-index: 100;
+  }
+  &__title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: $skyblue;
+    font-weight: 300;
+  }
+  &__number {
+    font-size: 6rem;
+    color: $purple;
+    font-weight: 300;
+  }
+  &__box {
+    background-color: $yellow;
+    padding: 1rem 2rem;
+    height: 0.3rem;
+    position: absolute;
+    bottom: 120px;
+    z-index: -100;
+    width: 15rem;
+  }
+}
