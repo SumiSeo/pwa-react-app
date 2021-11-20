@@ -20,14 +20,18 @@ const Dashboard = () => {
     return <div></div>;
   }
 
-  console.log("data", data);
-  const dataExpense = data ? data.Expenses : undefined;
-  console.log("data and more", dataExpense);
+  const dataExpenses = data ? data.Expenses : undefined;
+  console.log("data and more", dataExpenses);
+
+  const dataExpensesAmount = dataExpenses
+    ?.map((dataExpense) => dataExpense.amount)
+    .reduce((acc, cur) => acc + cur);
+
   return (
     <div className="dashboard">
       <div>
         <span>Expenses</span>
-        <h1></h1>
+        <h1>{dataExpensesAmount}</h1>
       </div>
       <div>
         <span>Income</span>
