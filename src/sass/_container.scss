@@ -1,11 +1,13 @@
 .container {
   display: flex;
+  background-color: white;
 
   &__column:first-child {
     width: 30%;
-    height: 100%;
   }
   &__column:last-child {
-    width: 60%;
+    width: 70%;
+    margin: 0 auto;
+    background-color: $container;
   }
 }

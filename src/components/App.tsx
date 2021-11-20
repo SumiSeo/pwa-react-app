@@ -1,16 +1,16 @@
 import React from "react";
-import Container from "./Container";
-import NavBar from "./NavBar";
+import { BrowserRouter, Route } from "react-router-dom";
+import AppContainer from "./AppContainer";
 
-
-const App: React.FC = () => {
+const App: React.FC = (props) => {
   return (
-    <div className="app">
-      <div className="app__container">
-        <NavBar />
-        <Container />
+    <BrowserRouter>
+      <div className="app">
+        <div className="app__container">
+          <AppContainer />
+        </div>
       </div>
-    </div>
+    </BrowserRouter>
   );
 };
 

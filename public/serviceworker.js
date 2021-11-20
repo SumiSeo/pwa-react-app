@@ -4,6 +4,16 @@ const assets = ["/", "index.html", "app.js", "offline.html"];
 // const urlsToCache = ["index.html", "offline.html"];
 
 const self = this;
+//Cache size limit function
+const limitCacheSize = (name, size) => {
+  caches.open(name).then((cache) => {
+    cache.keys().then((keys) => {
+      if (keys.length > size) {
+        cache.delete(keys[0]).then(limitCacheSize(name, size));
+      }
+    });
+  });
+};
 
 //install service worker
 self.addEventListener("install", (event) => {
@@ -41,13 +51,16 @@ self.addEventListener("fetch", (event) => {
           fetch(event.request).then((fetchRes) => {
             return caches.open(dynamicCacheName).then((cache) => {
               cache.put(event.request.url, fetchRes.clone());
+              limitCacheSize(dynamicCacheName, 15);
               return fetchRes;
             });
           })
         );
       })
       .catch(() => {
-        caches.match("./offline.html");
+        if (event.request.url.indexOf(".html") > -1) {
+          return caches.match("./offline.html");
+        }
       })
   );
 });

@@ -12,4 +12,31 @@ const QUERY_EXPENSES = gql`
   }
 `;
 
-export { QUERY_EXPENSES };
+const QUERY_INCOMES = gql`
+  query MyQuery {
+    Incomes {
+      amount
+      description
+      id
+      title
+    }
+  }
+`;
+
+const QUERY_LEDGERS = gql`
+  query MyQuery {
+    Incomes {
+      amount
+      description
+      id
+      title
+    }
+    Expenses {
+      amount
+      id
+      title
+    }
+  }
+`;
+
+export { QUERY_EXPENSES, QUERY_INCOMES, QUERY_LEDGERS };

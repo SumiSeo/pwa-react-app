@@ -3,11 +3,9 @@
   flex-direction: column;
 
   &__container {
-    padding: 1rem;
+    padding: 1rem 2rem;
     position: relative;
     height: 25rem;
-    &:hover {
-    }
   }
   &__name {
     font-size: 2.4rem;
@@ -31,6 +29,7 @@
       border: none;
       border-radius: 10px;
       padding: 1rem;
+      border: 1px solid $skyblue;
     }
   }
   &__title {
@@ -51,5 +50,10 @@
     cursor: pointer;
     color: white;
     font-family: inherit;
+    transition: all 0.5s ease-in-out;
+    &:hover {
+      background-color: $skyblue;
+      cursor: pointer;
+    }
   }
 }
