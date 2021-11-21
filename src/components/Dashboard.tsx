@@ -31,6 +31,14 @@ const Dashboard = () => {
     ?.map((dataIncome) => dataIncome.amount)
     .reduce((acc, cur) => acc + cur, 0);
 
+  const dataTotalIncome =
+    dataIncomesAmount !== undefined ? dataIncomesAmount : 0;
+
+  const dataTotalExpense =
+    dataExpensesAmount !== undefined ? dataExpensesAmount : 0;
+
+  const dataTotal = dataTotalIncome - dataTotalExpense;
+
   return (
     <div className="dashboard">
       <div className="dashboard__column">
@@ -41,7 +49,7 @@ const Dashboard = () => {
         <div className="dashboard__box"></div>
       </div>
       <div className="dashboard__column">
-        <span className="dashboard__title">Income</span>
+        <span className="dashboard__title">Incomes</span>
         <h1 className="dashboard__number dashboard__income">
           {dataIncomesAmount}
         </h1>
@@ -49,7 +57,7 @@ const Dashboard = () => {
       </div>
       <div className="dashboard__column">
         <span className="dashboard__title">Total</span>
-        <h1 className="dashboard__number dashboard__total"></h1>
+        <h1 className="dashboard__number dashboard__total">{dataTotal}</h1>
         <div className="dashboard__box"></div>
       </div>
     </div>
