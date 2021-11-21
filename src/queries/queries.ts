@@ -1,28 +1,6 @@
 import React from "react";
 import { gql } from "@apollo/client";
 
-const QUERY_EXPENSES = gql`
-  query MyQuery {
-    Expenses {
-      amount
-      description
-      id
-      title
-    }
-  }
-`;
-
-const QUERY_INCOMES = gql`
-  query MyQuery {
-    Incomes {
-      amount
-      description
-      id
-      title
-    }
-  }
-`;
-
 const QUERY_LEDGERS = gql`
   query MyQuery {
     Incomes {
@@ -39,4 +17,17 @@ const QUERY_LEDGERS = gql`
   }
 `;
 
-export { QUERY_EXPENSES, QUERY_INCOMES, QUERY_LEDGERS };
+const ADD_EXPENSE = gql`
+  mutation MyMutation($amount: Int, $description: String, $title: String) {
+    insert_Expenses_one(
+      object: { amount: $amount, description: $description, title: $title }
+    ) {
+      amount
+      description
+      id
+      title
+    }
+  }
+`;
+
+export { QUERY_LEDGERS, ADD_EXPENSE };
