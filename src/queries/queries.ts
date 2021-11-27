@@ -19,7 +19,9 @@ const QUERY_LEDGERS = gql`
 
 const ADD_EXPENSE = gql`
   mutation AddExpense($amount: Int, $description: String, $title: String) {
-    AddExpense(amount: $amount, description: $description, title: $title) {
+    insert_Expenses_one(
+      object: { amount: $amount, description: $description, title: $title }
+    ) {
       amount
       description
       id

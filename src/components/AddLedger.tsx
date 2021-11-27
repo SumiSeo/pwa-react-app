@@ -7,36 +7,25 @@ interface ChildProps {
 }
 
 interface Expense {
-  amount: number | null;
+  amount: number;
   description: string;
   id: number;
   title: string;
 }
 
 interface NewExpense {
-  amount: number | null;
+  amount: number;
   description: string;
   title: string;
 }
 
 let parsedAmount: number;
 const AddLedger: React.FC<ChildProps> = ({ purpose }) => {
-  const [amount, setAmount] = useState<null | number>(null);
+  const [amount, setAmount] = useState<number>(0);
   const [title, setTitle] = useState<string>("");
   const [description, setDescription] = useState<string>("");
 
-  const [AddExpense, { error, data, loading }] = useMutation<
-    { AddExpense: Expense },
-    { expense: NewExpense }
-  >(ADD_EXPENSE, {
-    variables: {
-      expense: {
-        description,
-        title,
-        amount,
-      },
-    },
-  });
+  const [AddExpense, { error, data, loading }] = useMutation(ADD_EXPENSE);
   if (!loading) {
     console.log("error", error);
     console.log("data", data);
@@ -45,13 +34,13 @@ const AddLedger: React.FC<ChildProps> = ({ purpose }) => {
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    console.log("submitted");
-    console.log("amount", amount);
-    console.log("title", title);
-    console.log("Desc", description);
-    if (amount && description && title) {
-      AddExpense();
-    }
+    AddExpense({
+      variables: {
+        amount: amount,
+        description: description,
+        title: title,
+      },
+    });
   };
   return (
     <div className="ledger">
