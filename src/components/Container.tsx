@@ -6,8 +6,8 @@ const Container: React.FC = () => {
   return (
     <div className="container">
       <div className="container__column">
-        <AddLedger title="Expense" />
-        <AddLedger title="Income" />
+        <AddLedger purpose="Expense" />
+        <AddLedger purpose="Income" />
       </div>
       <div className="container__column">
         <Dashboard />

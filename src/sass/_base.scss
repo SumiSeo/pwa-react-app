@@ -11,3 +11,11 @@ body {
   background-image: linear-gradient(to right bottom, $skyblue, $green);
   box-sizing: inherit;
 }
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}

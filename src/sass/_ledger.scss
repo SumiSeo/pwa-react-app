@@ -8,7 +8,7 @@
     height: 25rem;
   }
   &__name {
-    font-size: 2.4rem;
+    font-size: 2rem;
     color: $purple;
     margin: 1rem 0;
     font-weight: 500;
@@ -28,7 +28,7 @@
       outline: none;
       border: none;
       border-radius: 10px;
-      padding: 1rem;
+      padding: 1rem 2rem;
       border: 1px solid $skyblue;
     }
   }
@@ -55,5 +55,14 @@
       background-color: $skyblue;
       cursor: pointer;
     }
+  }
+  &__textarea {
+    width: 20rem;
+    font-family: inherit;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    padding: 1rem 2rem;
+    border: 1px solid $skyblue;
   }
 }
