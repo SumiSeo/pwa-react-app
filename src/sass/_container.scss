@@ -3,10 +3,10 @@
   background-color: white;
 
   &__column:first-child {
-    width: 30%;
+    width: 40rem;
   }
   &__column:last-child {
-    width: 70%;
+    width: 120rem;
     margin: 0 auto;
     background-color: $container;
   }

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ADD_EXPENSE } from "../queries/queries";
+import { ADD_EXPENSE, ADD_INCOME } from "../queries/queries";
 import { useMutation } from "@apollo/client";
 
 interface ChildProps {
@@ -26,15 +26,26 @@ const AddLedger: React.FC<ChildProps> = ({ purpose }) => {
   const [description, setDescription] = useState<string>("");
 
   const [AddExpense, { error, data, loading }] = useMutation(ADD_EXPENSE);
+  const [AddIncome] = useMutation(ADD_INCOME);
+  if (loading) {
+    console.log(loading);
+  }
   if (!loading) {
-    console.log("error", error);
     console.log("data", data);
-    console.log("addExpense", AddExpense);
   }
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    AddExpense({
+    if (purpose === "Expense") {
+      AddExpense({
+        variables: {
+          amount: amount,
+          description: description,
+          title: title,
+        },
+      });
+    }
+    AddIncome({
       variables: {
         amount: amount,
         description: description,
@@ -42,6 +53,7 @@ const AddLedger: React.FC<ChildProps> = ({ purpose }) => {
       },
     });
   };
+
   return (
     <div className="ledger">
       <div className="ledger__container">

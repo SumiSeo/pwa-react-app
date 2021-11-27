@@ -30,4 +30,16 @@ const ADD_EXPENSE = gql`
   }
 `;
 
-export { QUERY_LEDGERS, ADD_EXPENSE };
+const ADD_INCOME = gql`
+  mutation AddIncome($amount: Int, $description: String, $title: String) {
+    insert_Incomes_one(
+      object: { amount: $amount, description: $description, title: $title }
+    ) {
+      amount
+      description
+      id
+      title
+    }
+  }
+`;
+export { QUERY_LEDGERS, ADD_EXPENSE, ADD_INCOME };

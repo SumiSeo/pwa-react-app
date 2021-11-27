@@ -28,7 +28,7 @@
       outline: none;
       border: none;
       border-radius: 10px;
-      padding: 1rem 2.4rem;
+      padding: 1rem 2rem;
       border: 1px solid $skyblue;
     }
   }
@@ -57,11 +57,12 @@
     }
   }
   &__textarea {
+    width: 20rem;
     font-family: inherit;
     outline: none;
     border: none;
     border-radius: 10px;
-    padding: 1rem;
+    padding: 1rem 2rem;
     border: 1px solid $skyblue;
   }
 }
