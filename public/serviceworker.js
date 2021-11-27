@@ -1,5 +1,6 @@
 self = this;
 
+//change
 const staticCacheName = "site-static";
 const assets = ["/", "/index.html", "/app.js"];
 
